@@ -1,10 +1,3 @@
-module inverter (input A, output Y);
-
-    assign #1 Y = ~A;
-
-endmodule
-
-
 module RouteRingOscillator 
 #(
   parameter NUMCELLS=5   // Must be an odd number > 3 
