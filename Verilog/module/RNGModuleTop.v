@@ -2,51 +2,51 @@
 `timescale 1 ns / 1 ps
 
 //
-// Do a s=RNGModuleTop=<name of your module>=g to rename. 
-//  You will (hopefully) add ports to the register file ro 
 //
-	module RNGModuleTop #
-	(
-		// Users to add parameters here
+//
+//
+module RNGModuleTop #
+(
+	// Users to add parameters here
 
-		// User parameters ends
-		// Do not modify the parameters beyond this line
+	// User parameters ends
+	// Do not modify the parameters beyond this line
  
 
-		// Parameters of Axi Slave Bus Interface RegisterFile
-		parameter integer C_RegisterFile_DATA_WIDTH	= 32,
-		parameter integer C_RegisterFile_ADDR_WIDTH	= 7
+	// Parameters of Axi Slave Bus Interface RegisterFile
+	parameter integer C_RegisterFile_DATA_WIDTH	= 32,
+	parameter integer C_RegisterFile_ADDR_WIDTH	= 7
 	)
 	(
-		// Users to add ports here
+	// Users to add ports here
 
-		// User ports ends
-		// Do not modify the ports beyond this line
+	// User ports ends
+	// Do not modify the ports beyond this line
 
 
-		// Ports of Axi Slave Bus Interface RegisterFile
-		input wire  RegisterFile_aclk,
-		input wire  RegisterFile_aresetn,
-		input wire [C_RegisterFile_ADDR_WIDTH-1 : 0] RegisterFile_awaddr,
-		input wire [2 : 0] RegisterFile_awprot,
-		input wire  RegisterFile_awvalid,
-		output wire  RegisterFile_awready,
-		input wire [C_RegisterFile_DATA_WIDTH-1 : 0] RegisterFile_wdata,
-		input wire [(C_RegisterFile_DATA_WIDTH/8)-1 : 0] RegisterFile_wstrb,
-		input wire  RegisterFile_wvalid,
-		output wire  RegisterFile_wready,
-		output wire [1 : 0] RegisterFile_bresp,
-		output wire  RegisterFile_bvalid,
-		input wire  RegisterFile_bready,
-		input wire [C_RegisterFile_ADDR_WIDTH-1 : 0] RegisterFile_araddr,
-		input wire [2 : 0] RegisterFile_arprot,
-		input wire  RegisterFile_arvalid,
-		output wire  RegisterFile_arready,
-		output wire [C_RegisterFile_DATA_WIDTH-1 : 0] RegisterFile_rdata,
-		output wire [1 : 0] RegisterFile_rresp,
-		output wire  RegisterFile_rvalid,
-		input wire  RegisterFile_rready
-	);
+	// Ports of Axi Slave Bus Interface RegisterFile
+	input wire  RegisterFile_aclk,
+	input wire  RegisterFile_aresetn,
+	input wire [C_RegisterFile_ADDR_WIDTH-1 : 0] RegisterFile_awaddr,
+	input wire [2 : 0] RegisterFile_awprot,
+	input wire  RegisterFile_awvalid,
+	output wire  RegisterFile_awready,
+	input wire [C_RegisterFile_DATA_WIDTH-1 : 0] RegisterFile_wdata,
+	input wire [(C_RegisterFile_DATA_WIDTH/8)-1 : 0] RegisterFile_wstrb,
+	input wire  RegisterFile_wvalid,
+	output wire  RegisterFile_wready,
+	output wire [1 : 0] RegisterFile_bresp,
+	output wire  RegisterFile_bvalid,
+	input wire  RegisterFile_bready,
+	input wire [C_RegisterFile_ADDR_WIDTH-1 : 0] RegisterFile_araddr,
+	input wire [2 : 0] RegisterFile_arprot,
+	input wire  RegisterFile_arvalid,
+	output wire  RegisterFile_arready,
+	output wire [C_RegisterFile_DATA_WIDTH-1 : 0] RegisterFile_rdata,
+	output wire [1 : 0] RegisterFile_rresp,
+	output wire  RegisterFile_rvalid,
+	input wire  RegisterFile_rready
+);
   
 
 // Instantiation of Axi Bus Interface RegisterFile
@@ -78,4 +78,4 @@
 	);
 
 
-	endmodule
+endmodule
